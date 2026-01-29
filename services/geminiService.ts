@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import { ChatMessage } from "../types";
 
 // The API key must be obtained exclusively from the environment variable process.env.API_KEY.
-const VITE_GEMINI_API_KEY = process.env.API_KEY; 
+const VITE_GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 export const generateMathResponse = async (
   history: ChatMessage[], 
