@@ -2,15 +2,15 @@ import { GoogleGenAI } from "@google/genai";
 import { ChatMessage } from "../types";
 
 // The API key must be obtained exclusively from the environment variable process.env.API_KEY.
-const VITE_GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_KEY = import.meta.env.GEMINI_API_KEY;
 
 export const generateMathResponse = async (
   history: ChatMessage[], 
   currentMessage: string
 ): Promise<string> => {
   // Assume process.env.API_KEY is pre-configured, valid, and accessible.
-  // Must use new GoogleGenAI({ apiKey: process.env.API_KEY }).
-  const ai = new GoogleGenAI({ apiKey: VITE_GEMINI_API_KEY });
+  // Must use new GoogleGenAI({ apiKey: rocess.env.API_KEY }).
+  const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
   
   // Create a chat session
   // Using gemini-3-pro-preview for complex text tasks (Math) as per guidelines.
