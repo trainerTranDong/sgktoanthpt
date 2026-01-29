@@ -10,7 +10,7 @@ export const generateMathResponse = async (
 ): Promise<string> => {
   // Assume process.env.API_KEY is pre-configured, valid, and accessible.
   // Must use new GoogleGenAI({ apiKey: process.env.API_KEY }).
-  const ai = new GoogleGenAI({ apiKey: API_KEY });
+  const ai = new GoogleGenAI({ apiKey: VITE_GEMINI_API_KEY });
   
   // Create a chat session
   // Using gemini-3-pro-preview for complex text tasks (Math) as per guidelines.
